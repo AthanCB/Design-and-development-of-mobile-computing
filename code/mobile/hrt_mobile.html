@@ -14,16 +14,50 @@
       </header>
       <div class="main_navbar">
         <ul class="nav">
-          <li><a id="fires" href="#">Πυρκαγιές</a></li>
-          <li><a id="floods" href="#">Πλημμύρες</a></li>
-          <li><a id="earthquakes" href="#">Σεισμοί</a></li>
-          <li><a id="landslides" href="#">Κατολισθήσεις</a></li>
-          <li><a id="contact" href="contact.html">Επικοινωνία</a></li>
+          <li class="collapsible"><a id="fires" href="#">Πυρκαγιές</a></li>
+          <div class="content">
+              <p>Πυρκαγίες</p>
+            </div> 
+          <li class="collapsible"><a id="floods" href="#">Πλημμύρες</a></li>
+          <div class="content">
+              <p>Πλημμύρες</p>
+            </div> 
+          <li class="collapsible"><a id="earthquakes" href="#">Σεισμοί</a></li>
+          <div class="content">
+              <p>Σεισμοί</p>
+            </div> 
+          <li class="collapsible"><a id="landslides" href="#">Κατολισθήσεις</a></li>
+          <div class="content">
+              <p>Κατολισθήσεις</p>
+            </div> 
+          <li class="collapsible"><a id="contact" href="#">Επικοινωνία</a></li>
+          <div class="content">
+              <p>Επικοινωνία</p>
+            </div> 
         </ul>
       </div>
+     
      <footer>
       <h3 id="tagline">Ελληνική Ομάδα Διάσωσης</h3>
+      <p><a href="../hrt_desktop.html">Desktop website</a></p>
      </footer>
   </div>
+
+  <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+
 </body>
 </html>
