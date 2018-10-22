@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background-color: #42413C;
+	background-color: red;
 	margin: 0;
 	padding: 0;
 	color: #000;
@@ -33,7 +33,7 @@ a:hover, a:active, a:focus {
 }
 
 .container {
-	background-color: #FFFFFF;
+	background-color: #fff5ea;
 	margin: 0 auto; 
 }
 
@@ -87,13 +87,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 	color: #FFF;
 }
 
-footer {
-	text-align: center;
-	padding: 10px 0;
-	background-color: #CCC49F;
-	position: relative;
-	clear: both; 
-}
 
 header, section, footer, aside, article, figure {
 	display: block;
@@ -131,7 +124,7 @@ ul.nav a#contact, ul.nav a:visited#contact {
 footer {
 	text-align: center;
 	padding: 10px 0;
-	background-color: #CCC49F;
+	background-color: #a67947;
 	position: relative;
 	clear: both; 
 }
