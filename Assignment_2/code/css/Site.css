@@ -1,10 +1,57 @@
-.navbar{
-    background-color:#2196f3;
-}
-.container{
+body{
     background-color:#bbdefb;
+}
+.navbar{
+    background-color:#1976d2;
 }
 .custom-header{
-    width: 100%;
-    background-color:#bbdefb;
+    height: 90vh;
+    min-height: 550px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../images/bg.jpg");
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .custom-font{
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size:65px;
+}}
+
+.row{
+    text-align:center;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-faded{
+    color:gray;
+}
+
+.container{
+    background-color:white;
+    max-width:100% !important;
+}
+
+h2{
+    text-align: center;
+}
+
+#myCarousel{
+    max-width: 30%;
+    margin-bottom: 5; 
+    margin: 0 auto;
+}
+
+.section-image{
+    width:96px;
+}
+
+@media only screen and (min-width: 600px) {
+#contact-form{
+    width: 40%;
+}
 }
