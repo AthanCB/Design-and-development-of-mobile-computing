@@ -1,8 +1,12 @@
 body{
-    background-color:#bbdefb;
+    background-color:white;
 }
 .navbar{
-    background-color:#1976d2;
+    background-color:#212121;
+}
+
+.bg-whiteblue{
+    background-color:#2196f3;
 }
 .custom-header{
     height: 90vh;
