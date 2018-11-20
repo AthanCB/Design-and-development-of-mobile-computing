@@ -1,0 +1,52 @@
+#testpanel{
+    background: #fafafa;
+}
+
+.ui-panel-inner{
+    padding: 0px;
+}
+
+.container{
+    padding: 0px;
+    text-align: center;
+}
+
+h4{
+    font-size: 12px !important;
+}
+
+.ui-listview >li > a.ui-btn{
+    margin-left: 10px;
+}
+
+.custom-form{
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+hr{
+    color: white;
+}
+
+.small-hr{
+    width:50%;
+}
+
+/*Placeholder*/
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+ }
