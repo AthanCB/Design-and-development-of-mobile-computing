@@ -38,17 +38,32 @@
             <h3>Επικοινωνία</h3>
             <h4>E-mail:</h4>
             <h4>athancb@hotmail.com</h4>
-            <h4>Κινητό Τηλέφωνο:</h4>
-            <h4>6976219982</h4>
-            <div>
-
+            
+                    <div id="googleMap" style="width:100%;height:200px;"></div>
     </div>
 
 </div>
 <div data-role="footer" data-position="fixed">
      <h4>Athanasios Bonis - athancb@hotmail.com</h4>
 </div>
-
+<script>
+        function myMap() {
+        var mapProp= {
+            center:new google.maps.LatLng(37.79715,26.70226),
+            zoom:15,
+        };
+        var myLatLng = {lat: 37.79715, lng: 26.70226};
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'fossaegean'
+        });
+        
+        
+        }
+</script>       
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM5OUrQ_7sWQrkwTzr5lUxmKAdDVIXplk&callback=myMap"></script>
 <script>
 $(document).ready(function() {
     $('#terms').click(function() {
