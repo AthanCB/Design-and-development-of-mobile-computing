@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+ 
   <script src="http://cdn.rawgit.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
   <script id="mobile-datepicker" src="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="stylesheet" href="../code/css/Site.css"/>
 </script>
 </head>
@@ -48,10 +50,10 @@
                     </select>
                 </fieldset>
                 <hr/>
+                
                 <div class="ui-field-contain">
                     <label>Φορέας Διοργάνωσης:</label>
                     <input type="text" placeholder="Τμήμα, Σύλλογος, Οργανισμός"></input>
-                    <hr class="small-hr"/>
                     <label>Εκπρόσωπος φορέα:</label>
                     <input type="text" placeholder="Ονοματεπώνυμο Εκπροσώπου"></input>
                     <label>Τηλέφωνο Επικοινωνίας:</label>
@@ -63,15 +65,48 @@
                     <label>E-mail:</label>
                     <input type="text" placeholder="example@example.com"></input>
                 </div>
-                <hr/>
+                <h2>Πληροφορίες Εκδήλωσης</h2>
+                <hr class="small-hr"/>
                 <div class="ui-field-contain">
                     <label>Τίτλος Εκδήλωσης:</label>
                     <input type="text"></input>
                     <label>Είδος Εκδήλωσης:</label>
-                    <input type="text"></input>
+                    <input type="text" placeholder="Αθλητική Δραστηριότητα, Γιορτή, Διαγωνισμός, Διάλεξη, Ημερίδα/Διημερίδα/Εσπερίδα"></input>
                     <label>Ημερομηνία Διεξαγωγής:</label>
-                    <input type="text" data-role="date"></input>
+                    <input type="date" data-role="date"></input>
+                    <label>Εκτιμώμενος αιρθμός ατόμων:</label>
+                    <input type="text"></input>
                 </div>
+                <h2>Αναγκαίος Τεχνικός Εξοπλισμός</h2>
+                <hr class="small-hr"/>
+                <fieldset data-role="controlgroup">
+                        <label for="projector">Overehead Projector</label>
+                        <input type="checkbox" name="projector" id="projector"></input>
+                        <label for="net">Δυνατότητα πρόσβασης στο τηλεπικοινωνιακό δίκτυο του Πανεπιστημίου Αιγαίου και το διαδίκτυο</label>
+                        <input type="checkbox" name="net" id="net"></input>
+                        <label for="mic">Μικροφωνική Εγκατάσταση</label>
+                        <input type="checkbox" name="mic" id="mic"></input>
+                        <label for="video">Βιντεοπροβολέας</label>
+                        <input type="checkbox" name="video" id="video"></input>
+                    </fieldset>
+                 <hr/>
+                 <h2>Επιλογή Χώρου</h2>
+                 <hr class="small-hr"/>
+                 <fieldset data-role="ui-field-contain">
+                        <label for="switch">Αίθουσα Διδασκαλίας:</label>
+                        <input type="checkbox" data-role="flipswitch" name="switch" id="switch"></input>
+                        <label for="switch2">Άλλοι Χώροι, διευκρινήστε:</label>
+                        <input type="checkbox" data-role="flipswitch" name="switch2" id="switch2"></input>
+                        <input type="text"></input>
+                        <hr class="small-hr"/>
+                        <label for="textarea" >Παρατηρήσεις:</label>
+                        <textarea name="textarea" id="textarea" placeholder="Προσδιορίστε ώρα έναρξης και ώρα λήξης της εκδήλωσης" ></textarea>
+                        <hr class="small-hr"/>
+                        <label for="terms">Συμφωνείτε στους όρους χρήσης</label>
+                        <input type="checkbox" name="terms" id="terms"></input>
+                 </fieldset>
+                 <hr/>
+                <input type="submit" id="btn_submit" value="Αποστολή" data-icon="check" data-iconpos="right"></input>
              </form>
             <div>
 
@@ -81,5 +116,21 @@
 <div data-role="footer" data-position="fixed">
      <h4>Athanasios Bonis - athancb@hotmail.com</h4>
 </div>
+
+
+<script>
+$(document).ready(function() {
+    $('#terms').click(function() {
+        if ($(this).is(':checked')) {
+            $('#btn_submit').attr('disabled',false);
+            console.log($('#btn_submit').attr('disabled'));
+        } else {
+            $('#btn_submit').attr('disabled',true);
+            console.log($('#btn_submit').attr('disabled'));
+        }
+       
+    });
+});
+    </script> 
 </body>
 </html>
