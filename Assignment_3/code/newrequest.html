@@ -12,7 +12,6 @@
  
   <script src="http://cdn.rawgit.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
   <script id="mobile-datepicker" src="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="stylesheet" href="../code/css/Site.css"/>
 </script>
 </head>
@@ -23,7 +22,7 @@
         <ul data-role="listview" style="margin-right: 0">
             <li><a class="side-item" href="../code/index.html">Αρχική</a></li>
             <li><a href="#">Νέα Αίτηση</a></li>
-            <li><a href="#">Σχετικά με Εμάς</a></li>
+            <li><a href="../code/about.html">Σχετικά με Εμάς</a></li>
         </ul>
       </div>
 <div data-role="header" style="background-color: #232323;">
@@ -102,9 +101,19 @@
                         <label for="textarea" >Παρατηρήσεις:</label>
                         <textarea name="textarea" id="textarea" placeholder="Προσδιορίστε ώρα έναρξης και ώρα λήξης της εκδήλωσης" ></textarea>
                         <hr class="small-hr"/>
+                        <label for="textarea" >Θέλετε να ενημερώνεστε μέσω τηλεφώνου για την εξέλιξη;</label>
+                        <label>
+                                <input type="radio" name="radio-choice-0" id="radio-choice-0a">Ναι
+                            </label>
+                            <label for="radio-choice-0b">Όχι</label>
+                            <input type="radio" name="radio-choice-0" id="radio-choice-0b" class="custom">
+                            <hr class="small-hr"/>
                         <label for="terms">Συμφωνείτε στους όρους χρήσης</label>
                         <input type="checkbox" name="terms" id="terms"></input>
+                        
                  </fieldset>
+                 
+                
                  <hr/>
                 <input type="submit" id="btn_submit" value="Αποστολή" data-icon="check" data-iconpos="right"></input>
              </form>
@@ -117,16 +126,15 @@
      <h4>Athanasios Bonis - athancb@hotmail.com</h4>
 </div>
 
-
 <script>
 $(document).ready(function() {
     $('#terms').click(function() {
         if ($(this).is(':checked')) {
-            $('#btn_submit').attr('disabled',false);
-            console.log($('#btn_submit').attr('disabled'));
+            $('#btn_submit').prop('disabled', false);
+            console.log($('#btn_submit').prop('disabled'));
         } else {
-            $('#btn_submit').attr('disabled',true);
-            console.log($('#btn_submit').attr('disabled'));
+            $('#btn_submit').prop('disabled', true);
+            console.log($('#btn_submit').prop('disabled'));
         }
        
     });
