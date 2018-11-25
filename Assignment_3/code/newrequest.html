@@ -4,7 +4,7 @@
 <title>University of the Aegean Events</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="../code/css/SiteCustomTheme.css" />
+<link rel="stylesheet" href="../code/css/SiteTheme.css" />
   <link rel="stylesheet" href="../code/css/jquery.mobile.icons.min.css" />
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
@@ -13,7 +13,7 @@
   <script src="http://cdn.rawgit.com/jquery/jquery-ui/1.10.4/ui/jquery.ui.datepicker.js"></script>
   <script id="mobile-datepicker" src="http://cdn.rawgit.com/arschmitz/jquery-mobile-datepicker-wrapper/v0.1.1/jquery.mobile.datepicker.js"></script>
   <link rel="stylesheet" href="../code/css/Site.css"/>
-</script>
+
 </head>
 <body>
 <div data-role="page">
@@ -108,20 +108,24 @@
                             <label for="radio-choice-0b">Όχι</label>
                             <input type="radio" name="radio-choice-0" id="radio-choice-0b" class="custom">
                             <hr class="small-hr"/>
+                            <a href="../code/terms.html" data-rel="dialog" >Όροι χρήσης</a>
                         <label for="terms">Συμφωνείτε στους όρους χρήσης</label>
                         <input type="checkbox" name="terms" id="terms"></input>
                         
                  </fieldset>
                  
-                
+               
                  <hr/>
                 <input type="submit" id="btn_submit" value="Αποστολή" data-icon="check" data-iconpos="right"></input>
              </form>
             <div>
 
     </div>
-
+    
 </div>
+
+
+      
 <div data-role="footer" data-position="fixed">
      <h4>Athanasios Bonis - athancb@hotmail.com</h4>
 </div>
@@ -136,8 +140,8 @@ $(document).ready(function() {
             $('#btn_submit').prop('disabled', true);
             console.log($('#btn_submit').prop('disabled'));
         }
-       
     });
+    
 });
     </script> 
 </body>
